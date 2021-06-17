@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:BackButtonCustomActionPage
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XF_NavBarBackBtnOverride"
+             Title="Third Page"
+             EnableBackButtonOverride="True"
+             BackgroundColor="LightGreen"
+             x:Class="XF_NavBarBackBtnOverride.Page2">
+             <!--xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Cancel"
+            Order="Primary" />
+    </ContentPage.ToolbarItems>
+    <StackLayout
+        Spacing="20"
+        Padding="20,10,20,10"
+        VerticalOptions="Center"
+        HorizontalOptions="Center" >
+
+        <Label Text="This is the cool page, which has the Navigation Bar Back button click overriden. Now go ahead and click that Back button! ;)"
+           FontSize="20"
+           HorizontalTextAlignment="Center"
+           TextColor="White"/>
+        
+        <!--uncomment to use SfPopupLayout-->
+        <!--<sfPopup:SfPopupLayout
+                x:Name="popup"
+                StaysOpen="True"
+                Grid.Row="4">
+            <sfPopup:SfPopupLayout.PopupView>
+                <sfPopup:PopupView
+                        AnimationMode="Zoom"
+                        ShowFooter="False">
+                    <sfPopup:PopupView.HeaderTemplate>
+                        <DataTemplate>
+                            <Label
+                                Text="Exiting an Edited Task"
+                                HorizontalTextAlignment="Center"
+                                VerticalTextAlignment="Center"
+                                FontSize="16"
+                                FontAttributes="Bold" />
+                        </DataTemplate>
+                    </sfPopup:PopupView.HeaderTemplate>
+
+                    <sfPopup:PopupView.ContentTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <button:SfButton
+                                        x:Name="SaveTask"
+                                        Clicked="Save_Clicked"
+                                        Margin="0,5"
+                                        BorderWidth="0"
+                                        CornerRadius="20"
+                                        FontSize="16"
+                                        HeightRequest="40"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Text="Save Task &amp; Go Back"
+                                        BackgroundColor="Green"
+                                        WidthRequest="250" />
+                                <button:SfButton
+                                        x:Name="GoBack"
+                                        Clicked="GoBack_Clicked"
+                                        Margin="0,5"
+                                        BorderWidth="0"
+                                        CornerRadius="20"
+                                        FontSize="16"
+                                        HeightRequest="40"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Text="Go Back, without saving"
+                                        BackgroundColor="Red"
+                                        WidthRequest="250" />
+                                <button:SfButton
+                                        x:Name="StayHere"
+                                        Clicked="StayHere_Clicked"
+                                        Margin="0,5"
+                                        BorderWidth="0"
+                                        CornerRadius="20"
+                                        FontSize="16"
+                                        HeightRequest="40"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Text="Stay Here ..."
+                                        WidthRequest="250" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </sfPopup:PopupView.ContentTemplate>
+                </sfPopup:PopupView>
+            </sfPopup:SfPopupLayout.PopupView>
+        </sfPopup:SfPopupLayout>-->
+    </StackLayout>
+</local:BackButtonCustomActionPage>
